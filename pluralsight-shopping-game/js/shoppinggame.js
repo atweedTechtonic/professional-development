@@ -13,10 +13,10 @@ const player = {
     return this.score;
   },
   addPoints(points) {
-    return this.score + points;
+    this.score += points;
   },
   deductPoints(points) {
-    return this.score - points;
+    this.score -= points;
   },
 };
 // Define the Product class - write the Constructor function for Product class here
@@ -34,19 +34,47 @@ const dateDiff = (date1, date2) => {
 };
 
 // Here, use Object.defineProperty to create property - daysToExpire
+// This adds the property to the Product object!
 Object.defineProperty(Product.prototype, 'daysToExpire', {
-  get: () => {
-    // do nothing now
+  get: function () {
+    return dateDiff(this.expiryDate, new Date());
   },
 });
 
 // Add method getDetails to Product here
+Product.prototype.getDetails = function () {
+  return `Product Name: ${this.name} , Product Price: ${this.price}`;
+};
 
 // Define the MagicProduct class here
-
+// MagicProduct is a child / extension of Product
+function MagicProduct(id, name, price, expiryDate, points, isBonus) {
+  Product.call(this, id, name, price, expiryDate);
+  this.points = points;
+  this.isBonus = isBonus;
+}
+// https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Inheritance
 // Establish inheritance between Product() & MagicProduct() here
+MagicProduct.prototype = Object.create(Product.prototype);
 
 // Define Rating class here
+class Rating {
+  constructor() {
+    this.rate = '';
+  }
+
+  set rating(value) {
+    if (value > 1 && value <= 4) {
+      this.rate = 'OK';
+    } else if (value >= 5 && value <= 7) {
+      this.rate = 'GOOD';
+    } else if (value > 7) {
+      this.rate = 'EXCEPTIONAL';
+    } else {
+      this.rate = 'BAD';
+    }
+  }
+}
 
 // Complete the loadProducts function
 const loadProducts = (map, prodId) => {
