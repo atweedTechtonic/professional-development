@@ -246,10 +246,24 @@ function loadMasterData() {
 }
 
 // Complete this function
-const findProductById = (id) => {};
+const findProductById = (id) => {
+  return () => {
+    const product = new Product();
+
+    if (id === product.id) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+};
 
 // Complete this function
-const generateProductId = () => {};
+const generateProductId = () => {
+  const min = 1;
+  const max = 20;
+  return Math.floor(Math.random() * (max - min + 1) + min);
+};
 
 const getProduct = (prodList, pId) => {
   return prodList.find(findProductById(pId));
