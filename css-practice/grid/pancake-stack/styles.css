@@ -1,0 +1,23 @@
+header {
+  background: blue;
+  font-size: 100px;
+}
+
+main {
+  background: purple;
+}
+
+footer {
+  background: cyan;
+  height: 100px;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: auto 1fr auto;
+}
+
+/* auto - wraps to content 
+   fr - free space
+*/
