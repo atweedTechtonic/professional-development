@@ -1,0 +1,28 @@
+.item-1 {
+  background: yellow;
+  /* take up cols 2 to 5 */
+  grid-column: 2 / 6;
+  height: 60vh;
+}
+
+.item-2 {
+  background: dodgerblue;
+  /* take up remaining cols */
+  grid-column: 6 / 12;
+  height: 60vh;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 35px;
+
+  /* can align inside container */
+  align-items: center;
+}
+
+/* 
+left side gets 4 cols
+right side gets 6 cols 
+*/

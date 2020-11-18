@@ -28,12 +28,11 @@ header {
 }
 
 .nav {
-
   &__list {
     display: inline; // this removes bullets
     padding: 0;
   }
-  
+
   &__item {
     display: inline-block;
     margin: 0 5px 0 5px; // spacing between the nav links
@@ -47,4 +46,38 @@ header {
       color: white;
     }
   }
+}
+
+.main {
+  display: block;
+  background-image: url('../images/background.png');
+  padding-top: 3em;
+  padding-bottom: 3em;
+  min-height: 85%;
+
+  @media only screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.aside {
+  text-align: center;
+  padding: 2em;
+
+  @media only screen and (min-width: 768px) {
+    margin-left: 2%;
+  }
+}
+
+.cta {
+  padding: 2em;
+  width: 75%; // keeps content from stretching to far across page
+}
+
+.footer {
+  padding: 2em;
+  border: 2px solid green;
+}
+
+@media only screen and (min-width: 768px) {
 }
