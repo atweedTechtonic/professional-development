@@ -68,10 +68,21 @@ header {
   padding: 2em;
   width: 75%;
 }
+.cta__title {
+  font-size: 3em;
+  margin-top: 0.5em;
+}
+.cta__img {
+  max-width: 100%;
+}
+.cta__desc {
+  background-color: #fff;
+  font-size: 1.5em;
+  padding: 30px;
+}
 
 .footer {
   padding: 2em;
-  border: 2px solid green;
 }
 
 /*# sourceMappingURL=index.css.map */

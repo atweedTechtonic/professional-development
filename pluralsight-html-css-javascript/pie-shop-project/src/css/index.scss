@@ -72,11 +72,26 @@ header {
 .cta {
   padding: 2em;
   width: 75%; // keeps content from stretching to far across page
+  
+  &__title {
+    font-size: 3em;
+    margin-top: 0.5em;
+  }
+
+  &__img {
+    max-width: 100%; // 100% of the container (.cta)
+  }
+
+  &__desc {
+    background-color: #fff;
+    font-size: 1.5em;
+    padding: 30px;
+
+  }
 }
 
 .footer {
   padding: 2em;
-  border: 2px solid green;
 }
 
 @media only screen and (min-width: 768px) {
