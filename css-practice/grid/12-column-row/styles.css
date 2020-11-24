@@ -1,0 +1,26 @@
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+}
+
+.item-1 {
+  background: red;
+  grid-row: 2;
+}
+
+.item-2 {
+  background: blue;
+  grid-row: 3;
+}
+
+.item-3 {
+  background: green;
+  grid-row: 3;
+}
+
+.item-4 {
+  background: purple;
+  grid-row: 1;
+}
